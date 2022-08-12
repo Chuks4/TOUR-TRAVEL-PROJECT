@@ -1,0 +1,704 @@
+* {
+  font-family: "Raleway", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+/* Header Section start Here */
+
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-section #hamburger-icon {
+  font-size: 3rem;
+  padding: 0rem 1.2rem;
+  margin: 1rem;
+  display: none;
+}
+
+.header-section #hamburger-icon:hover {
+  color: rgb(255, 136, 0);
+}
+
+.header-section a {
+  text-decoration: none;
+}
+
+.header-section .header-text {
+  font-family: inherit;
+  font-weight: bolder;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: rgb(255, 136, 0);
+  cursor: pointer;
+}
+
+.header-section span {
+  color: white;
+}
+
+.header-section .nav-section a {
+  display: inline-block;
+  padding: 10px;
+  font-size: 2rem;
+  list-style-type: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.header-section .nav-section a:hover {
+  color: rgb(255, 136, 0);
+  transition: 0.2s ease-in-out;
+}
+
+.header-section .header-icons i {
+  padding: 5px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.header-section .header-icons i:hover {
+  color: rgb(255, 136, 0);
+}
+
+.header-section .form-container.active {
+  left: 0;
+}
+
+.header-section .form-container {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  background-color: #333;
+  border-top: 0.5rem solid rgba(255, 255, 255, 0.2);
+  right: 0;
+  left: -100%;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  z-index: 1001;
+  transition: 0.5s ease;
+}
+
+.header-section .form-container #search-bar {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-transform: none;
+  color: #333;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.header-section .form-container label {
+  font-size: 3rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.header-section .form-container label:hover {
+  color: rgb(255, 136, 0);
+}
+
+/* Header Section ends Here */
+
+/*nav bar login form container starts here*/
+.login-form-container {
+  left: -100%;
+  position: absolute;
+}
+.login-form-container.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  transition: 0.5s ease;
+}
+
+.login-form-container form {
+  margin: 2rem;
+  padding: 1.5rem 2rem;
+  width: 50rem;
+  background: #0000008c;
+  border-radius: 0.5rem;
+}
+
+.login-form-container form h3 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: rgb(255, 136, 0);
+  padding: 1rem 0;
+}
+.login-form-container form .input-box {
+  width: 100%;
+  padding: 1.5rem 0.7rem;
+  margin: 0.8rem 0;
+  font-size: 1.5rem;
+}
+
+.login-form-container form .input-box:focus {
+  border: 2px solid rgb(255, 136, 0);
+  outline: none;
+}
+.login-form-container form .submitBtn {
+  width: 100%;
+  padding: 1.5rem 0.7rem;
+  margin: 0.8rem 0;
+  background-color: rgb(255, 136, 0);
+  border: none;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.login-form-container form .submitBtn:hover {
+  background-color: rgb(241, 180, 12);
+}
+
+.login-form-container form #remember {
+  margin: 2rem 0;
+}
+
+.login-form-container form label {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: #fff;
+}
+
+.login-form-container form p {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  color: #fff;
+}
+
+.login-form-container form p a {
+  color: rgb(255, 136, 0);
+  text-decoration: none;
+}
+
+.login-form-container form p a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.login-form-container form #icon-remove {
+  font-size: 3rem;
+  color: rgb(255, 136, 0);
+  padding-left: 95%;
+  cursor: pointer;
+}
+
+.login-form-container form #icon-remove:hover {
+  color: #fff;
+}
+/*nav bar login form container ends here*/
+
+/* home section starts here */
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+}
+
+.home {
+  text-align: center;
+  background-image: url(../images/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home .content h3 {
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  text-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.home .content p {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.home .content .content-btn {
+  background-color: rgb(255, 136, 0);
+  padding: 1.5rem 2.5rem;
+  margin-top: 2%;
+  font-size: 2rem;
+  color: #fff;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.home .content .content-btn:hover {
+  background-color: rgba(255, 136, 0, 0.699);
+}
+/* home section ends here */
+
+/* Book section starts here */
+.book-heading {
+  text-align: center;
+  padding: 2.5rem 0;
+}
+
+.book-heading span {
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  background: rgba(255, 165, 0, 0.5);
+  color: rgb(255, 136, 0);
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.book-heading span.space {
+  background: none;
+}
+
+.book .arrangements {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.book .arrangements .image {
+  flex: 1 1 20rem;
+}
+
+.book .arrangements .image img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.book .arrangements form {
+  padding: 2rem;
+  flex: 1 1 25rem;
+  background-color: fff;
+  color: #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.book .arrangements form .inputBox {
+  padding: 0.5rem 0;
+}
+
+.book .arrangements form .inputBox h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin: 1rem 0;
+}
+
+.book .arrangements form .inputBox input {
+  width: 100%;
+  padding: 1rem;
+  border: 1rem solid rgba(0, 0, 0, 0.1);
+  font-size: 1.7rem;
+}
+
+.book .arrangements form .inputBox input:focus {
+  border: 2px solid rgb(255, 136, 0);
+}
+
+.book .arrangements form .inputBox button {
+  margin-top: 1.7rem;
+  padding: 1rem 4rem;
+  font-size: 1.6rem;
+  background-color: rgb(255, 136, 0);
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.book .arrangements form .inputBox button:hover {
+  background-color: rgba(255, 136, 0, 0.699);
+}
+/* Book section ends here */
+
+/* packages section starts here */
+.packages .packages-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.packages .packages-container .packages-box {
+  flex: 1 1 30rem;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin: 2rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+.packages-container .packages-box:hover {
+  transform: scale(1.06);
+}
+
+.packages-container .packages-box p {
+  width: 90%;
+}
+
+.packages-container .packages-box img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.packages-container .packages-box .packages-contents {
+  padding: 0.6rem;
+  font-size: 1.5rem;
+}
+
+.packages-container .packages-box .packages-contents h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.packages-container .packages-box .packages-contents h3 i {
+  padding: 1rem 0.5rem;
+  font-size: 2rem;
+  color: rgb(255, 136, 0);
+}
+
+.packages-container .packages-box .packages-contents p {
+  padding: 0.8rem;
+}
+
+.packages-container .packages-box .packages-contents .rating-stars {
+  padding: 0.2rem 0.8rem 0;
+}
+
+.packages-container .packages-box .packages-contents .rating-stars i {
+  color: rgb(255, 136, 0);
+}
+
+.packages-container .packages-box .packages-contents .rating-stars span i {
+  border-color: rgb(255, 136, 0);
+}
+
+.packages-container .packages-box .packages-contents .price p {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.packages-container .packages-box .packages-contents .price p span {
+  font-weight: normal;
+  color: #333;
+  text-decoration: line-through;
+  padding: 0.5rem;
+}
+
+.packages-container .packages-box .packages-contents .price button {
+  text-transform: capitalize;
+  padding: 0.9rem 0.9rem;
+  margin: 0 0 2rem 0.8rem;
+  background-color: rgb(255, 136, 0);
+  outline: none;
+  border: none;
+  color: #fff;
+}
+
+.packages-container .packages-box .packages-contents .price button:hover {
+  background-color: rgba(255, 136, 0, 0.699);
+}
+/* packages section ends here */
+
+/* services section starts here */
+.services .services-container {
+  display: flex;
+  align-items: center;
+flex-wrap: wrap;
+}
+
+.services .services-container .services-content {
+  flex: 1 1 30rem;
+  text-align: center;
+  margin: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 1rem;
+  text-transform: capitalize;
+}
+
+.services .services-container .services-content i {
+  font-size: 5rem;
+  padding: 1rem;
+  color: rgb(255, 136, 0);
+}
+
+.services .services-container .services-content h3 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+.services .services-container .services-content p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+
+.services .services-container .services-content:hover {
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.2);
+  transform: scale(1.06);
+}
+
+/* services section ends here */
+
+/* gallery starts here */
+.gallery .gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery-container .gallery-content {
+  flex: 1 1 30rem;
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.2);
+  margin: 2rem 2rem;
+  border: 0.8rem solid #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.gallery .gallery-container .gallery-content:hover {
+  transform: scale(1.06);
+}
+
+.gallery .gallery-container .gallery-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* gallery ends here */
+
+/* review section starts here */
+.review .review-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+ 
+}
+
+.review .review-container .review-box {
+  flex: 1 1 30rem;
+  background-color: #fff;
+  color: #333;
+  border-radius: 0.9rem;
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.4);
+  margin: 2rem 2rem;
+  cursor: pointer;
+}
+
+.review .review-container .review-box:hover {
+  transform: scale(1.06);
+}
+
+.review .review-container .review-box img {
+  width: 13rem;
+  height: 13rem;
+  position: relative;
+  top: 3em;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.review .review-container .review-box .review-content {
+  text-align: center;
+  padding: 1rem 0;
+  position: relative;
+  top: 2rem;
+}
+
+.review .review-container .review-box .review-content h3 {
+  font-size: 1.7rem;
+  color: #333;
+  padding: 1rem 1rem 0;
+}
+
+.review .review-container .review-box .review-content p {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #666;
+  padding: 1rem;
+}
+
+.review .review-container .review-box .rating-stars {
+  margin-top: -1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: rgb(255, 136, 0);
+}
+/* review section ends here */
+
+/* contact section starts here */
+.contact .contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact .contact-container .image {
+  flex: 1 1 35rem;
+}
+
+.contact .contact-container .image img {
+  width: 100%;
+}
+
+.contact .contact-container form {
+  padding: 2rem;
+  flex: 1 1 50rem;
+  background-color: fff;
+  color: #333;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.4);
+}
+
+.contact .contact-container form .inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact .contact-container form .inputBox input,
+.contact .contact-container form textarea {
+  width: 49%;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: #333;
+  background-color: #f7f7f7;
+  text-transform: none;
+  outline: none;
+  border: none;
+}
+
+.contact .contact-container form textarea {
+  width: 100%;
+  height: 15rem;
+  resize: none;
+}
+
+.contact .contact-container form button {
+  text-transform: capitalize;
+  padding: 1.2rem 1.6rem;
+  margin: 1rem 0;
+  background-color: rgb(255, 136, 0);
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+/* contact section ends here */
+
+/* footer section starts here */
+footer {
+  background-color: #333;
+  padding: 3rem 9%;
+  margin-top: 3rem;
+}
+
+footer .footer-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+footer .footer-container .box {
+  padding: 2rem 0;
+  flex: 1 1 25rem;
+}
+
+.footer-container .box h3 {
+  font-size: 2.5rem;
+  padding: 0.7rem 0;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.footer-container .box p {
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 0.7rem 0;
+}
+
+.footer-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: #eee;
+  padding: 0.7rem;
+  text-decoration: none;
+}
+
+.footer-container .box a:hover {
+  text-decoration: underline;
+  color: rgb(255, 136, 0);
+}
+
+footer .credit {
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 0.6rem;
+  margin-top: 1rem;
+  font-weight: normal;
+  text-transform: capitalize;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer .credit span {
+  color: rgb(255, 136, 0);
+}
+/* footer section ends here */
